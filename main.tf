@@ -7,7 +7,8 @@ provider "azurerm" {
 }
 
 module "simple" {
-    source              = ""
-    location            = "westus"
-    resource_group_name = "${var.resource_group_name}"
+    prefix		= "testcase1"
+    source              = "github.com/iramathur1991/terraform-azurerm-simple"
+    region              = "westus"
+   
   }
