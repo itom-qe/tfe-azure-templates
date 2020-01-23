@@ -1,5 +1,5 @@
 
-variable "resource_group" "rgName"{
+variable "resource_group" "rg"{
   description = "The name of the resource group in which to create the virtual network."
   default="terraform-group"
 }
@@ -24,7 +24,7 @@ variable "lb_ip_dns_name" {
   default="lb1"
 }
 
-variable "vm_count_per_subnet" {
+variable "vm_count_per_subnet" "subnet"{
 	description = "count per subnet"
 	default=2
 }
@@ -33,7 +33,7 @@ variable "region" {
   description = "The location/region where the virtual network is created. Changing this forces a new resource to be created."
 }
 
-variable "virtual_network_name" "network"{
+variable "virtual_network_name" "vnet"{
   description = "The name for the virtual network."
   default     = "vnet"
 }
@@ -43,7 +43,7 @@ variable "address_space" {
   default     = "10.0.0.0/16"
 }
 
-variable "subnet_prefix" "subnet"{
+variable "subnet_prefix" {
   description = "The address prefix to use for the subnet."
   default     = "10.0.10.0/24"
 }
@@ -58,7 +58,7 @@ variable "storage_replication_type" {
   default     = "LRS"
 }
 
-variable "vm_size" "vm_size"{
+variable "vm_size" "vm_size" {
   description = "Specifies the size of the virtual machine."
   default     = "Standard_D1_v2"
 }
