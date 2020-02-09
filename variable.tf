@@ -1,18 +1,11 @@
-variable "subscriptionId" {
-}
-
-variable "clientId" {
-}
-
-variable "clientSecret" {
-}
-
-variable "tenantId" {
-}
+variable "subscriptionId" {}
+variable "clientId" {}
+variable "clientSecret" {}
+variable "tenantId" {}
 
 variable "resource_group" {
   description = "The name of the resource group in which to create the virtual network."
-  default     = "terraform-group"
+  default="terraform-group"
 }
 
 variable "rg_prefix" {
@@ -22,22 +15,22 @@ variable "rg_prefix" {
 
 variable "hostname" {
   description = "VM name referenced also in storage-related names."
-  default     = "tf"
+  default="tf"
 }
 
 variable "dns_name" {
   description = " Label for the Domain Name. Will be used to make up the FQDN. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system."
-  default     = "vm"
+  default="vm"
 }
 
 variable "lb_ip_dns_name" {
   description = "DNS for Load Balancer IP"
-  default     = "lb1"
+  default="lb1"
 }
 
 variable "vm_count_per_subnet" {
-  description = "count per subnet"
-  default     = 2
+	description = "count per subnet"
+	default=2
 }
 
 variable "region" {
@@ -101,6 +94,5 @@ variable "admin_username" {
 
 variable "admin_password" {
   description = "administrator password (recommended to disable password auth)"
-  default     = "admin01!"
+  default = "admin01!"
 }
-
