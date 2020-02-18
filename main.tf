@@ -130,16 +130,8 @@ resource "azurerm_virtual_machine" "vm" {
     admin_username = "${var.admin_username}"
     admin_password = "${var.admin_password}"
   }
-  provisioner "file" {
-    source      = "script.sh"
-    destination = "/tmp/script.sh"
+os_profile_windows_config {
   }
-  provisioner "remote-exec"  {
-    inline = [
-      "chmod +x /tmp/script.sh",
-      "/tmp/script.sh args",
-    ]
-  }
-  tags = {
+tags = {
     environment = "Production"}
 }
