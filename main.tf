@@ -100,7 +100,7 @@ resource "azurerm_network_interface" "nic" {
     name                                    = "ipconfig${count.index}${random_id.server.hex}"
     subnet_id                               = "${azurerm_subnet.subnet.id}"
     private_ip_address_allocation           = "Dynamic"
-   
+    }
 }
 
 resource "azurerm_virtual_machine" "vm" {
