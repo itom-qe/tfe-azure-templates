@@ -4,4 +4,5 @@ module "simple" {
 
   prefix = "tfe-check"
   region = "WESTUS"
+  resource_group ="moduleTest"
 }
