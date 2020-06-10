@@ -1,7 +1,7 @@
-module "simple" {
-  source  = "app.terraform.io/cmporg/simple/azurerm"
-  version = "0.0.1"
-
+module "complex" {
+  source  = "app.terraform.io/cmporg/complex/azure"
+  version = "0.0.3"
+}
   prefix = "tfe-test"
   region = "WESTUS"
 }
