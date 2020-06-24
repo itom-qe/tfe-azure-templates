@@ -103,7 +103,7 @@ resource "azurerm_network_interface" "nic" {
 }
 
 resource "azurerm_virtual_machine" "vm" {
-  name                  = "vm${count.index}${random_id.server.hex}"
+  name                  = "vms${count.index}${random_id.server.hex}"
   location              = var.region
   resource_group_name   = azurerm_resource_group.rg.name
   availability_set_id   = azurerm_availability_set.avset.id
