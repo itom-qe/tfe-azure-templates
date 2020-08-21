@@ -3,7 +3,7 @@ resource "random_id" "server" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "${var.resource_group_1}-${random_id.server.hex}"
+  name     = "${var.resource_group}-${random_id.server.hex}"
   location = "${var.region}"
 }
 
@@ -126,13 +126,13 @@ resource "azurerm_virtual_machine" "vm" {
   }
 
   os_profile {
-    computer_name  = "${var.hostname[0]}"
+    computer_name  = "${var.hostname}"
     admin_username = "${var.admin_username}"
     admin_password = "${var.admin_password}"
   }
 
   os_profile_windows_config {}
-  tags ={
-  Environment="mojo-tag"
- }
+tags ={
+Environment="${var.environment[0]}"
+}
 }
