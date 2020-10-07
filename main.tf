@@ -7,13 +7,7 @@ resource "azurerm_resource_group" "rg" {
   location = var.region
 }
 
-resource "azurerm_storage_account" "stor" {
-  name                     = "stor${random_id.server.hex}"
-  location                 = var.region
-  resource_group_name      = azurerm_resource_group.rg.name
-  account_tier             = var.storage_account_tier
-  account_replication_type = var.storage_replication_type
-}
+
 
 resource "azurerm_availability_set" "avset" {
   name                         = "avset${random_id.server.hex}"
