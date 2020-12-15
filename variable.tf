@@ -37,7 +37,7 @@ variable "lb_ip_dns_name" {
 
 variable "vm_count_per_subnet" {
   description = "count per subnet"
-  default     = 2
+  default     = 3
 }
 
 variable "region" {
@@ -103,4 +103,10 @@ variable "admin_password" {
   description = "administrator password (recommended to disable password auth)"
   default     = "admin02!"
 }
+
+variable "dummy" {
+  description = "administrator password (recommended to disable password auth)"
+  default     = "admin02!"
+}
+
 
