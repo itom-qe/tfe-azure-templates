@@ -109,4 +109,6 @@ variable "dummy" {
   default     = "admin02!"
 }
 
-
+variable "environment" {
+   default = "staging"
+}
